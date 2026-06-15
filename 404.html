@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>V Scans</title>
+  <script>
+    // GitHub Pages SPA redirect trick:
+    // Convert the path to a query string and redirect to index.html
+    // The main app then reads the redirect and restores it as a hash route.
+    var path = window.location.pathname.slice(1);
+    window.location.replace(
+      window.location.origin + '/' +
+      (path ? '?p=' + encodeURIComponent(path) + '&' : '') +
+      window.location.search.slice(1) +
+      window.location.hash
+    );
+  </script>
+</head>
+<body>Redirecting…</body>
+</html>
